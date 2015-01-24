@@ -1,0 +1,58 @@
+body {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 5px 0 10px;
+  width: 100%;
+}
+
+.wrapper {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.wrapper > div {
+  margin: 50px 0;
+}
+
+.intro {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 40px;
+}
+
+.btn {
+  padding: 8px 15px;
+  background: #337AB7;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #135A97;
+}
+
+.active {
+  background: #135A97;
+  border: 3px solid yellow;
+}
+
+.wrapper .results {
+  margin-top: 0;
+}
+
+.results h4,
+.results p {
+  margin: 5px 0;
+}
