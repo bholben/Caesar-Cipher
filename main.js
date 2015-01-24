@@ -1,9 +1,8 @@
 
+// View control is in this file.
+
 var whichWay = 'Encrypt',
-    results = '',
     btn = $('span.btn'),
-    // inputjq = $('#inputText'),
-    // input = document.getElementById('inputText'),
     submit = $('input[type="submit"'),
     wrapper = $('.wrapper');
 
@@ -11,6 +10,7 @@ var whichWay = 'Encrypt',
 var clearResults = function () {
   $('.results').remove();
 };
+
 
 btn.on('click', function (e) {
   clearResults();
@@ -21,14 +21,15 @@ btn.on('click', function (e) {
   whichWay = e.target.textContent;
 });
 
+
 submit.on('click', function (e) {
+  var str = document.getElementById('inputText').value;
   e.preventDefault();
   clearResults();
-  results = document.getElementById('inputText').value + '  asdfsdf'
   wrapper.append('' +
     '<div class="results">' +
       '<h4>' + whichWay + 'ed text:</h4>' +
-      '<p>' + results + '</p>' +
+      '<p>' + rotString(str) + '</p>' +
     '</div>')
 });
 
