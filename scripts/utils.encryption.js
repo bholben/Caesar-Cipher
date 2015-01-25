@@ -13,7 +13,7 @@ var isUpper = function (charCode) {
   };
 };
 
-var rotChar = function (char, offset, direction) {
+var rotChar = function (direction, offset, char) {
   var charCodeOld = char.charCodeAt(0),
       upper = isUpper(charCodeOld),
       lower = isLower(charCodeOld);
@@ -26,10 +26,10 @@ var rotChar = function (char, offset, direction) {
   return char;
 };
 
-var rotString = function (str) {
+var rotString = function (direction, offset, str) {
   var result = '';
   for (i in str) {
-    result += rotChar(str[i], 13, whichWay);
+    result += rotChar(direction, offset, str[i]);
   };
   return result;
 };
