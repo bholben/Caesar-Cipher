@@ -21,11 +21,9 @@ var rotEncryption = {
     var charCodeOld = char.charCodeAt(0),
         upper = utils.isUpper(charCodeOld),
         lower = utils.isLower(charCodeOld);
-    // console.log(charCodeOld, upper, lower);
     if (upper || lower) {
       if (direction === 'Decode') { offset = 26 - offset };
       var charCodeA = upper || lower;
-      console.log(charCodeA);
       charCodeNew = (charCodeOld - charCodeA + offset) % 26 + charCodeA;
       return String.fromCharCode(charCodeNew);
     };
@@ -33,15 +31,12 @@ var rotEncryption = {
   },
 
   text: function (direction, offset, text) {
-    console.log(direction, offset, text)
     var result = '';
     for (i in text) {
       result += this.char(direction, offset, text[i]);
     };
-    console.log(result);
     return result;
   }
 
 };
 
-console.log(rotEncryption.text('Encode', 1, 'abcdef'));
