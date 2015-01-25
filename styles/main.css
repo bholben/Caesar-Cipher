@@ -5,17 +5,8 @@ body {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
-input[type="text"] {
-  display: block;
-  width: 100%;
-  margin: 5px 0 10px;
-  padding: 7px;
-  font-size: 20px;
+p {
+  margin: -15px 0;
 }
 
 .wrapper {
@@ -23,37 +14,40 @@ input[type="text"] {
   margin: 0 auto;
 }
 
-.wrapper > div {
-  margin: 70px 0;
-}
-
-.chosen-select {
+.chosen-select, .chosen-container {
   width: 100%;
+  margin: 10px 0;
 }
 
-.btn {
+textarea {
+  display: block;
+  width: 100%;
+  margin: 5px 0 10px;
+  padding: 7px;
+  font-size: 20px;
+  border-color: lightgrey;
+  border-radius: 5px;
+}
+
+input[type="button"] {
   padding: 8px 15px;
   background: #337AB7;
   color: white;
   border: 3px solid white;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: 16px;
 }
 
-.btn:hover {
+input[type="button"]:hover {
   background: #135A97;
 }
 
-.active {
-  background: #135A97;
-  border: 3px solid yellow;
+input[value="Clear Text"] {
+  float: right;
+  background: #F0AD4E;
 }
 
-.wrapper .results {
-  margin-top: 0;
+input[value="Clear Text"]:hover {
+  background: #D08D2E;
 }
 
-.results h4,
-.results p {
-  margin: 5px 0;
-}
