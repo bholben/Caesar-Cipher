@@ -11,8 +11,6 @@ A simple Caesar cipher (ROT13, et al)
 ### Technologies
   * HTML
   * CSS
-  * Jade
-  * Sass (SASS)
   * JavaScript
 
 ### How to use it
